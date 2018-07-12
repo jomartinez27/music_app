@@ -1,0 +1,30 @@
+<% if type == :new
+  action_cont = users_url
+  button_type = "Sign up!"
+elsif type == :login
+  action_cont = session_url
+  button_type = "Login"
+end
+   %>
+
+<form action="<%= action_cont %>" method="post">
+  <input type="hidden"
+  name="authenticity_token"
+  value="<% form_authenticity_token %>">
+
+  <label for="email">
+    Email
+    <input id="email"
+      type="text"
+      name="user[email]">
+  </label>
+
+  <label for="password">
+    Password:
+    <input id="password"
+      type="password"
+      name="user[password]">
+  </label>
+
+  <input type="submit" value="<%= button_type %>">
+</form>

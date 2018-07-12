@@ -1,0 +1,7 @@
+<h2>Sign up</h2>
+
+<% @user.errors.full_messages.each do |error| %>
+  <li><%= error %></li>
+<% end %>
+
+<%= render 'form', type: :new, user: @user %>
