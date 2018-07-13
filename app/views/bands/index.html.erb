@@ -1,0 +1,8 @@
+<h2> 🥁 Bands 🎸</h2>
+
+<ul>
+  <% @bands.each do |band| %>
+  <p><%= band.name %></p>
+  <a href="<%= band_url(band) %>">Band</a>
+  <% end %>
+</ul>

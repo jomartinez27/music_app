@@ -10,21 +10,21 @@ end
 <form action="<%= action_cont %>" method="post">
   <input type="hidden"
   name="authenticity_token"
-  value="<% form_authenticity_token %>">
+  value="<%= form_authenticity_token %>">
 
   <label for="email">
     Email
-    <input id="email"
+    <input
       type="text"
       name="user[email]">
   </label>
 
   <label for="password">
     Password:
-    <input id="password"
+    <input
       type="password"
       name="user[password]">
   </label>
 
-  <input type="submit" value="<%= button_type %>">
+<button type="submit" class="button"><span><%= button_type %></span></button>
 </form>

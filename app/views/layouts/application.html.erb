@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>MusicApp</title>
     <header>MusicApp</header>
     <%= csrf_meta_tags %>
 
@@ -12,7 +13,7 @@
     <form action="<%= session_url %>" method="post">
       <input type="hidden"
       name="authenticity_token"
-      value="<% form_authenticity_token %>">
+      value="<%= form_authenticity_token %>">
 
       <input type="hidden" name="_method" value="delete">
       <input type="submit" value="sign-out">
@@ -24,4 +25,6 @@
   <body>
     <%= yield %>
   </body>
+
+  <a href="<%= bands_url %>">View bands</a>
 </html>
